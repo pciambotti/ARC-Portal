@@ -1,0 +1,339 @@
+﻿#default_container
+{
+	padding: 5px;
+}
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.user_box:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.user_standard600
+{
+	float: left;
+	width: 600px;
+}
+#user_container
+{
+	margin-left: 0px;
+}
+#user_add
+{
+	width: 1101px;
+}
+#user_create
+{
+	float: left;
+	width: 600px;
+}
+#user_create_info
+{
+	float: left;
+	width: 485px;
+	margin-left: 10px;
+}
+.user_section
+{
+	border: 2px solid #3A4875;
+	min-height: 25px;
+	overflow: hidden;
+}
+
+.user_section h2
+{
+	color: #FFFFFF;
+	background-color: #3a4875;
+	font-size: 12px;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 15px;
+}
+.user_line
+{
+	width: 500px;
+	margin: 5px 0px 0px 5px;
+}
+.user_label
+{
+	float: left;
+	width: 150px;
+	min-height: 5px;
+	text-align: right;
+	margin-right: 15px;
+}
+.user_field
+{
+	float: left;
+	width: 325px;
+}
+.user_field input, .user_field select
+{
+	width: 150px;
+}
+.user_phone input
+{
+	width: 35px;
+}
+.user_last
+{
+	padding-bottom: 10px;
+}
+.user_submit
+{
+	padding: 5px 10px 5px 10px;
+	min-height: 18px;
+	/*margin: 0px auto;*/
+	width: 437px;
+}
+.user_error
+{
+	padding: 5px 10px 5px 0px;
+	min-height: 18px;
+}
+.user_error ul
+{
+	margin-left: 15px;
+}
+.user_error_standard
+{
+	padding: 5px 10px 5px 0px;
+}
+.user_error_standard ul
+{
+	margin-left: 15px;
+}
+
+.user_info
+{
+}
+.user_info div
+{
+	margin: 0px 0px 0px 0px;
+}
+.user_info span
+{
+	display: block;
+	margin: 0px 0px 0px 15px;
+}
+.user_info .strong
+{
+	margin: 0px;
+	font-weight: bold;
+}
+.HideButton { Display : none} 
+
+
+#user_list
+{
+	float: left;
+	width: 607px;
+}
+#user_list_details
+{
+	float: left;
+	margin-left: 10px;
+	width: 425px;
+}
+
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.User_List_Grid_Header
+{
+	/* ForeColor="White" Font-Bold="True" BackColor="#3A4875"></HeaderStyle> */
+	color: White;
+	font-weight: bold;
+	background-color: #3A4875;
+}
+.User_List_Grid_Row
+{
+	background-color: #CCCCCC;
+	height: 20px;
+}
+.User_List_Grid_Alternate
+{
+	background-color: White;
+	height: 20px;
+}
+.User_List_Grid_Selected
+{
+	background-color: #CE5D5A;
+	height: 20px;
+}
+.User_List_Grid_Pager
+{
+	/* ForeColor="Black" HorizontalAlign="Right" BackColor="#F7F7DE" */
+}
+.User_List_Grid_Footer
+{
+	/*BackColor="#CCCC99"*/
+}
+.User_List_Grid_Border
+,.User_List_Grid_Header
+,.User_List_Grid_Row
+,.User_List_Grid_Alternate
+,.User_List_Grid_Selected
+,.User_List_Details_Border
+{
+	border: solid 2px #3A4875;
+}
+.User_List_Details_Header
+{
+	/*  ForeColor="White" Font-Bold="True" BackColor="#3A4875" /> */
+	border: solid 2px #3A4875;
+	color: White;
+	font-weight: bold;
+	background-color: #3A4875;
+}
+.User_List_Details_Row
+{
+	margin-right: 10px;
+	vertical-align: top;
+}
+.User_List_Details_Row td
+{
+	margin-right: 10px;
+}
+.StyleTest
+{
+	background-color: #336699;
+}
+/*
+This will be the standard CSS for
+GridView
+DetailsView
+
+*/
+/* GridView */
+.Portal_GridView_Standard
+{
+}
+.Portal_GridView_Standard TR
+{
+	border: solid 2px #80A2D0;
+	height: 20px;
+	background-color: #CCCCCC;
+	vertical-align: top;
+}
+.Portal_GridView_Standard TR TR
+{
+	/* This is for the Pager, And potentially the footer */
+	border: none;
+}
+.Portal_GridView_Standard TH
+{
+	border: solid 2px #80A2D0;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #80A2D0;
+}
+TR.Portal_GridView_Standard_Alternate
+{
+	background-color: #FFFFFF;
+}
+TR.Portal_GridView_Standard_Selected
+{
+	background-color: #CE5D5A;
+}
+.LastCol
+{
+	border-right: solid 2px #80A2D0;
+}
+.HideButton { Display : none}
+
+/* DetailView */
+.Portal_DetailView_Standard
+{
+	border: solid 2px #80A2D0;
+	height: 20px;
+	background-color: #CCCCCC;
+}
+.Portal_DetailView_Standard input
+{
+	/*min-width: 300px;*/
+}
+
+.Portal_DetailView_Standard_Row
+{
+	background-color: #CCCCCC;
+	vertical-align: top;
+}
+.Portal_DetailView_Standard_Header
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #80A2D0;
+}
+
+.clearfix
+{
+	clear: both;
+}
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.agent_note
+{
+	color: #0000FF;
+}
+.webstatus td, .webstatus th
+{
+	padding: 0px 5px;
+	vertical-align: middle;
+	height: 20px;
+}
+.webstatus td div
+{
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 100px;
+}
+.webstatus td.valid
+{
+	background-color: #00CC00;
+}
+.webstatus td.invalid
+{
+	background-color: #FF0000;
+}
+.progressUpdate
+{
+	background-color: #C6C6C6;
+	width: 500px;
+	height: 150px;
+	margin-left: 100px;
+	position: absolute;
+}
+.progressUpdate > div
+{
+	margin: 0 auto;
+	width: 250px;
+	padding-top: 50px;
+}

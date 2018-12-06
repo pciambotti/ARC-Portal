@@ -1,0 +1,259 @@
+﻿.foo {} /* W3C CSS validator likes CSS files to start with a class rather than a comment. Soooooo.... */
+/* This style sheet is intended to contain OFTEN CHANGED rules used when the Menu control adapter is enabled. */
+
+/* When the Menu control's Orientation property is Vertical the adapter wraps the menu with DIV */
+/* whose class is AspNet-Menu-Vertical. */
+/* Note that the example menu in this web site uses relative positioning to force the menu to occupy */
+/* a specific place in the web page.  Your web site will likely use a different technique to position your */
+/* menu.  So feel free to change all the properties found in this CSS rule if you clone this style sheet. */
+/* There is nothing, per se, that is magical about these particular property value choices.  They happen to */
+/* work well for the sample page used to demonstrate an adapted menu. */
+.PrettyMenu .AspNet-Menu-Vertical
+{
+	/*
+    position:relative;
+    top: 36px;
+    left: 0;
+    z-index: 300;
+	*/
+}
+
+/* The menu adapter renders an unordered list (ul) in HTML for each tier in the menu. */
+/* So, effectively says: style all tiers in the menu this way... */
+.PrettyMenu ul
+{
+    background:#7795BD;
+}
+
+/* Top tier */
+.PrettyMenu .AspNet-Menu-Vertical ul.AspNet-Menu
+{
+    width: 146px;
+}
+
+/* This rule effectively says: style all tiers EXCEPT THE TOP TIER in the menu this way... */
+/* In other words, this rule can be used to style the second and third tiers of the menu without impacting */
+/* the topmost tier's appearance. */
+.PrettyMenu ul.AspNet-Menu ul
+{
+    width: 126px;
+    left: 146px;
+    top: 0px;
+    z-index: 400;
+}
+
+.PrettyMenu ul.AspNet-Menu ul ul
+{
+    width: 138px;
+    left: 125px;
+}
+
+/* The menu adapter generates a list item (li) in HTML for each menu item. */
+/* Use this rule create the common appearance of each menu item. */
+/* background:#7795BD url('../bg_nav.gif') repeat-x; */
+.PrettyMenu ul.AspNet-Menu li
+{
+    /*background:#7795BD url('../bg_nav.gif') repeat-x;*/
+	background-color: #7795BD;
+	background-image: url("../bg_nav.gif");
+	background-repeat: repeat-x;
+}
+
+/* Within each menu item is a link or a span, depending on whether or not the MenuItem has defined it's */
+/* NavigateUrl property. By setting a transparent background image here you can effectively layer two images */
+/* in each menu item.  One comes from the CSS rule (above) governing the li tag that each menu item has. */
+/* The second image comes from this rule (below). */
+.PrettyMenu ul.AspNet-Menu li a,
+.PrettyMenu ul.AspNet-Menu li span
+{
+    border-left: 1px solid #648ABD;
+	border-right: 1px solid #648ABD;
+	border-top: 1px solid #648ABD;
+	color: black;
+    	padding: 4px 2px 4px 8px;
+    	border-bottom: 0;
+    /*background: url('../arrowRight.gif') no-repeat right center;*/
+	background-color: Transparent;
+	background-image: url("../arrowRight.gif");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+/* When a menu item contains no submenu items it is marked as a "leaf" and can be styled specially by this rule. */
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Leaf a,
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Leaf span
+{
+    background-image: none;
+}
+
+/* Not used presently.  This is here if you modify the menu adapter so it renders img tags, too. */
+.PrettyMenu ul.AspNet-Menu li a img
+{
+    border-style: none;
+    vertical-align: middle;
+}
+
+/* When you hover over a menu item, this rule comes into play. */
+/* Browsers that do not support the CSS hover pseudo-class, use JavaScript to dynamically change the */
+/* menu item's li tag so it has the AspNet-Menu-Hover class when the cursor is over that li tag. */
+/* See MenuAdapter.js (in the JavaScript folder). */
+.PrettyMenu ul.AspNet-Menu li:hover, 
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover
+{
+    background:#80A2D0 !important;
+}
+
+.PrettyMenu ul.AspNet-Menu li:hover a, 
+.PrettyMenu ul.AspNet-Menu li:hover span, 
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover a,
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover span,
+.PrettyMenu ul.AspNet-Menu li:hover li:hover a, 
+.PrettyMenu ul.AspNet-Menu li:hover li:hover span, 
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-Hover a,
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-Hover span,
+.PrettyMenu ul.AspNet-Menu li:hover li:hover ul a:hover, 
+.PrettyMenu ul.AspNet-Menu li:hover li:hover ul span.Asp-Menu-Hover, 
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-Hover ul a:hover,
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-Hover ul span.Asp-Menu-Hover
+{
+    color: White;
+}
+
+.PrettyMenu ul.AspNet-Menu li:hover ul a, 
+.PrettyMenu ul.AspNet-Menu li:hover ul span, 
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover ul a,
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover ul span,
+.PrettyMenu ul.AspNet-Menu li:hover li:hover ul a, 
+.PrettyMenu ul.AspNet-Menu li:hover li:hover ul span, 
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-Hover ul a,
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-Hover ul span
+{
+    color: Black;
+}
+
+/* While you hover over a list item (li) you are also hovering over a link or span because */
+/* the link or span covers the interior of the li.  So you can set some hover-related styles */
+/* in the rule (above) for the li but set other hover-related styles in this (below) rule. */
+.PrettyMenu ul.AspNet-Menu li a:hover,
+.PrettyMenu ul.AspNet-Menu li span.Asp-Menu-Hover
+{
+    color: White;
+    /*background: url('../activeArrowRight.gif') no-repeat right center;*/
+	background-color: Transparent;
+	background-image: url("../activeArrowRight.gif");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.PrettyMenu ul.AspNet-Menu li.AspNet-Menu-Leaf a:hover
+{
+    background-image: none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* When the Menu control's Orientation property is Horizontal the adapter wraps the menu with DIV */
+/* whose class is AspNet-Menu-Horizontal. */
+/* Note that the example menu in this web site uses absolute positioning to force the menu to occupy */
+/* a specific place in the web page.  Your web site will likely use a different technique to position your */
+/* menu.  So feel free to change all the properties found in this CSS rule if you clone this style sheet. */
+/* There is nothing, per se, that is magical about these particular property value choices.  They happen to */
+/* work well for the sample page used to demonstrate an adapted menu. */
+
+.PrettyMenu .AspNet-Menu-Horizontal
+{
+    /*position:absolute;
+    left: 114px;
+    top: 0;
+    z-index: 300;*/
+}
+
+/* This rule controls the width of the top tier of the horizontal menu. */
+/* BE SURE TO MAKE THIS WIDE ENOUGH to accommodate all of the top tier menu items that are lined */
+/* up from left to right. In other words, this width needs to be the width of the individual */
+/* top tier menu items multiplied by the number of items. */
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu
+{
+    /*width: 540px;*/
+}
+
+/* This rule effectively says: style all tiers EXCEPT THE TOP TIER in the menu this way... */
+/* In other words, this rule can be used to style the second and third tiers of the menu without impacting */
+/* the topmost tier's appearance. */
+/* Remember that only the topmost tier of the menu is horizontal.  The second and third tiers are vertical. */
+/* So, they need a much smaller width than the top tier.  Effectively, the width specified here is simply */
+/* the width of a single menu item in the second and their tiers. */
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu ul
+{
+    width: 126px;
+    left: 0;
+    top: 100%;
+}
+
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu ul ul
+{
+    /*top: -0.36px;*/
+    top: 0px;
+}
+
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu ul ul
+{
+    width: 138px;
+}
+
+/* Generally, you use this rule to set style properties that pertain to all menu items. */
+/* One exception is the width set here.  We will override this width with a more specific rule (below) */
+/* That sets the width for all menu items from the second tier downward in the menu. */
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu li
+{
+    width: 126px;
+    text-align:center;
+}
+
+/* This rule establishes the width of menu items below the top tier.  This allows the top tier menu items */
+/* to be narrower, for example, than the sub-menu items. */
+/* This value you set here should be slightly larger than the left margin value in the next rule. See */
+/* its comment for more details. */
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu ul li
+{
+    text-align:left;
+    width: 126px;
+}
+
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu ul ul li
+{
+    width: 138px;
+}
+
+/* Third tier menus have to be positioned differently than second (or top) tier menu items because */
+/* they drop to the side, not below, their parent menu item. This is done by setting the last margin */
+/* value (which is equal to margin-left) to a value that is slightly smaller than the WIDTH of the */
+/* menu item. So, if you modify the rule above, then you should modify this (below) rule, too. */
+.PrettyMenu .AspNet-Menu-Horizontal ul.AspNet-Menu li ul li ul
+{
+    /*margin: top right bottom left;*/
+    /*margin: -1.4em 0 0 10.35em;*/
+    margin: 0px 0px 0px 124px;
+}
+/* -------------------------------------------------------------------------- */
+/* this tier is selected */
+.PrettyMenu li.AspNet-Menu-Selected
+{
+	/*border: 1px solid #4780B4 !important;*/
+	background: #4780B4 !important;
+	color: White !important;
+}
+/* a tier below this one is selected */
+.PrettyMenu li.AspNet-Menu-ChildSelected
+{
+	/*border: 1px solid #1F6FB9 !important;*/
+	background: #4780B4 !important;
+	color: White !important;
+}
+/* a tier above this one is selected */
+.PrettyMenu li.AspNet-Menu-ParentSelected
+{
+	/*border: 1px solid #043F75 !important;*/
+	background: #4780B4 !important;
+	color: White !important;
+}

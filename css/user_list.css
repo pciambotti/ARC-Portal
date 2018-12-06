@@ -1,0 +1,83 @@
+﻿.HideButton { Display : none} 
+
+
+#user_list
+{
+	float: left;
+	width: 607px;
+}
+#user_list_details
+{
+	float: left;
+	margin-left: 10px;
+	width: 425px;
+}
+
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.User_List_Grid_Header
+{
+	/* ForeColor="White" Font-Bold="True" BackColor="#3A4875"></HeaderStyle> */
+	color: White;
+	font-weight: bold;
+	background-color: #3A4875;
+}
+.User_List_Grid_Row
+{
+	background-color: #CCCCCC;
+	height: 20px;
+}
+.User_List_Grid_Alternate
+{
+	background-color: White;
+	height: 20px;
+}
+.User_List_Grid_Selected
+{
+	background-color: #CE5D5A;
+	height: 20px;
+}
+.User_List_Grid_Pager
+{
+	/* ForeColor="Black" HorizontalAlign="Right" BackColor="#F7F7DE" */
+}
+.User_List_Grid_Footer
+{
+	/*BackColor="#CCCC99"*/
+}
+.User_List_Grid_Border
+,.User_List_Grid_Header
+,.User_List_Grid_Row
+,.User_List_Grid_Alternate
+,.User_List_Grid_Selected
+,.User_List_Details_Border
+{
+	border: solid 2px #3A4875;
+}
+.User_List_Details_Header
+{
+	/*  ForeColor="White" Font-Bold="True" BackColor="#3A4875" /> */
+	border: solid 2px #3A4875;
+	color: White;
+	font-weight: bold;
+	background-color: #3A4875;
+}
+.User_List_Details_Row
+{
+	margin-right: 10px;
+}
+.User_List_Details_Row td
+{
+	margin-right: 10px;
+    border: 1px solid lightgray;
+}
+.StyleTest
+{
+	background-color: #336699;
+}

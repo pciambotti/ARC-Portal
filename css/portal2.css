@@ -1,0 +1,147 @@
+﻿*{
+	margin: 0px;
+	padding: 0px;
+}
+/* Problem here:
+master_header
+master_header_top
+master_header_menu
+master_header_menu_bottom
+ */
+
+body
+{
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 12px;
+	/*min-width: 1050px;*/
+	width: 1250px;
+	margin: 10px;
+}
+#portal_container
+{
+	/*margin: 0px auto;*/
+	/*text-align: left;*/
+	width: 1250px;
+}
+/* Header Section */
+#master_header_new
+{
+	width: 1250px;
+	background-color: #CCCCCC;
+	margin-bottom: 10px;
+}
+#master_header_new_top_left
+{
+	float: left;
+	width: 1000px;
+	/*background-color: #FFFFFF;*/
+	background-color: #EEEEEE;
+}
+#master_header_new_top_right
+{
+	float: left;
+	width: 250px;
+	height: 99px;
+	/*background-color: #FFFFFF;*/
+	background-color: #c6c6c6;
+	text-align: right;
+}
+
+#master_header_bottom
+{
+	height: 25px;
+	min-width: 1050px;
+	background-color: #666699;
+}
+#master_header_bottom_left
+{
+	float: left;
+	min-width: 850px;
+}
+	#master_header_bottom_left_inner
+	{
+		margin: 0px 0px 0px 25px;
+	}
+#master_header_bottom_right
+{
+	float: right;
+	min-width: 250px;
+}
+
+
+	#master_header_logo
+	{
+		float: left;
+		min-width: 800px;
+		min-height: 100px;
+		background-color: #cdcdcd;
+	}
+		#master_header_logo_top
+		{
+			height: 76px;
+			margin: 0px 0px 0px 25px;
+		}
+		#master_header_logo_bottom
+		{
+			height: 24px;
+			margin: 0px 0px 0px 25px;
+		}
+	#master_header_footer
+	{
+		clear: left;
+	}
+		#master_header_footer_left
+		{
+			float: left;
+			min-width: 800px;
+			min-height: 25px;
+			background-color: #666699;
+		}
+			#master_header_footer_left_inner
+			{
+				margin: 0px 0px 0px 25px;
+			}
+		#master_header_footer_right
+		{
+			float: right;
+			/*width: 25%;*/
+			width: 250px;
+			min-height: 25px;
+			background-color: #3333CC;
+		}
+
+/* Content Section */
+#master_content
+{
+	/* background-color: #C6C6C6; */
+	background-color: #EEEEEE;
+	min-height: 400px;
+	margin-bottom: 10px;
+}
+#master_content_inner
+{
+}
+/* Footer Section */
+#master_footer
+{
+	background-color: #666666;
+	min-height: 50px;
+	margin-bottom: 10px;
+}
+#master_footer_static
+{
+	padding: 10px;
+}
+#master_footer_debug
+{
+	margin: 5px;
+	border: solid 1px red;
+}
+/* General */
+.clear_both
+{
+	clear: both;
+}
+

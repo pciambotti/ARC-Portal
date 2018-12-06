@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ARC - Refund Processed</title>
+    <style type="text/css">
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 600px;
+            font-size: 12px;
+        }
+        p
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        td
+        {
+            vertical-align: top;
+        }
+        .label
+        {
+        	width: 115px;
+        }
+        .field
+        {
+        	font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img title="Greenwood &amp; Hall" src="http://portal.greenwoodhall.com/images/GHLogoCYMK.ai-size-300.jpg" alt="Greenwood &amp; Hall" width="300" height="63" />
+        <br />
+        <br />
+        <span style="color: Red;">
+            Agent: <span style="font-weight: bold;">{agent_name}</span>
+        </span>
+        <br /><span style="color: Red;">ARC - REFUND REPORT</span>
+        <br />
+        <span style="color: Blue;font-weight: bold;">
+            --- REFUND PROCESSED {attempt_on} ---
+        </span>
+        <br /><span style="color: Red;font-weight: bold;">{refund_type} refund</span>
+        <table>
+            <tr>
+                <td class="label">Call ID</td>
+                <td class="field">{callid}</td>
+            </tr>
+            <tr>
+                <td class="label">Donation Date</td>
+                <td class="field">{donation_date}</td>
+            </tr>
+            <tr>
+                <td class="label">Donation CC Info ID</td>
+                <td class="field">{donationccinfoid}</td>
+            </tr>
+            <tr>
+                <td class="label">Refund Status</td>
+                <td class="field">{refund_status}</td>
+            </tr>
+            <tr>
+                <td class="label">Refund Reason</td>
+                <td class="field">{refund_reason}</td>
+            </tr>
+            <tr>
+                <td class="label">Donation Amount</td>
+                <td class="field">{amount_donation}</td>
+            </tr>
+            <tr>
+                <td class="label">Refund Amount</td>
+                <td class="field">{amount_refund}</td>
+            </tr>
+            <tr>
+                <td class="label" colspan="2" align="center"><b>Donor Details</b></b></td>
+            </tr>
+            <tr>
+                <td class="label">First Name</td>
+                <td class="field">{first_name}</td>
+            </tr>
+            <tr>
+                <td class="label">Last Name</td>
+                <td class="field">{last_name}</td>
+            </tr>
+            <tr>
+                <td class="label">Card Refunded</td>
+                <td class="field">{card_num}</td>
+            </tr>
+        </table>
+        <br /><span style="color: Red;">{refund_message}</span>
+        <hr />
+        <br />The call occured approximately at: {script_time} server time.
+        <br />Server Time is {script_timezone}
+        <br />
+        <br />DataExchange Automated Emails
+        <br />
+        <br />Please email your account rep with any questions regarding this email.
+        <br /><strong>Include this email via reply or forward.</strong></div>
+</body>
+</html>

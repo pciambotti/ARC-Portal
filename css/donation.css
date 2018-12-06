@@ -1,0 +1,121 @@
+﻿tr.statusTest
+{
+	background-color: #FFFF00;
+}
+td.statusSubmited
+{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+td.statusApproved, td.statusPayPal_Complete
+{
+	background-color: #0033CC;
+}
+td.statusDecline
+{
+	background-color: #CC3300;
+}
+td.statusSettled
+{
+	background-color: #00CCFF;
+}
+td.statusRefund_Proc, td.statusPayPal_Cancelled
+{
+	background-color: #FF0000;
+}
+td.sourceCA
+{
+	background-color: #FF66FF;
+}
+td.sourceUSA
+{
+	background-color: #9900CC;
+}
+div.source
+{
+	display: inline-block;
+	margin-left: 2px;
+	width: 50px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+div.source.mobile
+{
+	width: 60px;
+}
+div.source.web, td.source.web
+{
+	background-color: #9900CC;
+	
+}
+div.source.phone, td.source.phone
+{
+	background-color: #FF66FF;
+}
+div.source.batch, td.source.batch
+{
+	background-color: #FFA500; /* Orange */
+}
+div.source.sms, td.source.sms
+{
+	background-color: #FF6600;
+}
+div.source.ivr, td.source.ivr
+{
+	background-color: #6666FF;
+}
+div.source.mobile, td.source.mobile
+{
+	background-color: #006600;
+}
+div.source.mgive, td.source.mgive
+{
+	background-color: #00CCFF;
+}
+div.source.kimbia, td.source.kimbia
+{
+	background-color: #0033CC;
+}
+div.source.applepay, td.source.applepay
+{
+	background-color: #0033CC;
+}
+
+.rainbow
+{
+	background-color: #FF0000; /* Red */
+	background-color: #FFA500; /* Orange */
+	background-color: #FFFF00; /* Yellow */
+	background-color: #008000; /* Green */
+	background-color: #0000FF; /* Blue */
+	background-color: #4B0082; /* Indigo */
+	background-color: #FF0000; /* Violet */
+}
+.report-grid
+{
+	font-weight: bold;
+	font-size: 12px;
+	width: 1000px;
+}
+.report-grid td
+{
+	height: 28px;
+	vertical-align: middle;
+	padding: 0px 3px;
+}
+.report-controls
+{
+	display: inline-block;width: 560px;margin: 0px;
+}
+.report-timers
+{
+	display: inline-block;
+	width: 435px;
+	margin: 0px;
+	text-align: right;
+}
+.report-timers-nextin
+{
+	display: inline-block;width: 55px;text-align: center;background-color: #C6C6C6;	
+}

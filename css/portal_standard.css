@@ -1,0 +1,81 @@
+﻿/*
+This will be the standard CSS for
+GridView
+DetailsView
+
+*/
+/* GridView */
+.Portal_GridView_Standard
+{
+}
+.Portal_GridView_Standard TR
+{
+	border: solid 2px #80A2D0;
+	height: 20px;
+	background-color: #CCCCCC;
+}
+.Portal_GridView_Standard TR TD
+{
+	border: solid 1px #80A2D0;
+}
+.Portal_GridView_Standard TR TD.LastCol
+{
+	border-right: solid 2px #80A2D0;
+}
+.Portal_GridView_Standard TR TR
+{
+	/* This is for the Pager, And potentially the footer */
+	border: none;
+}
+.Portal_GridView_Standard TH
+{
+	border: solid 2px #80A2D0;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #80A2D0;
+}
+TR.Portal_GridView_Standard_Alternate
+{
+	background-color: #FFFFFF;
+}
+TR.Portal_GridView_Standard_Selected
+{
+	background-color: #CE5D5A;
+}
+.HideButton { Display : none}
+
+/* DetailView */
+.Portal_DetailView_Standard
+{
+	border: solid 2px #80A2D0;
+	height: 20px;
+	background-color: #CCCCCC;
+}
+.Portal_DetailView_Standard input
+{
+	/*min-width: 300px;*/
+}
+
+.Portal_DetailView_Standard_Row
+{
+	background-color: #CCCCCC;
+}
+.Portal_DetailView_Standard_Header
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #80A2D0;
+}
+
+.clearfix
+{
+	clear: both;
+}
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}

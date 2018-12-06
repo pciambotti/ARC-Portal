@@ -1,0 +1,13 @@
+﻿#default_container
+{
+    display: inline-block;
+	margin: 5px;
+}
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}

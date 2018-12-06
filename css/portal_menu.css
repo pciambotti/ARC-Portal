@@ -1,0 +1,116 @@
+﻿.SimpleMenu,
+.SimpleMenu .AspNet-Menu-Vertical,
+.SimpleMenu .AspNet-Menu
+{
+    /*border: solid 1px #003366;*/
+    border: none;
+}
+.SimpleMenu ul.AspNet-Menu /* Tier 1 */
+{
+    width: 150px; /* This is more than (6em x 2) because we want to leave room for borders around the <li> elements that are selected */
+}
+.SimpleMenu ul.AspNet-Menu ul  /* Tier 2 */
+{
+    top: 0;
+    width: 125px;
+    left: 150px;
+}
+.SimpleMenu ul.AspNet-Menu ul ul  /* Tier 3+ */
+{
+    top: 0;
+    left: 125px;
+}
+
+/* all list items */
+.SimpleMenu li
+{
+	width: 100px;
+	background: #80A2D0;
+}
+
+.SimpleMenu li:hover, /* list items being hovered over */
+.SimpleMenu li.AspNet-Menu-Hover
+{
+    background: #7795BD !important;
+}
+
+.SimpleMenu a, .SimpleMenu span
+{
+	color: #FFFFFF; /*padding: 4px 2px 4px 8px;*/
+	padding: 4px 0px 4px 0px; /*border:1px solid #003366;*/
+	/*background: Transparent url("../arrowRight.gif") right center no-repeat;*/
+	text-indent: 5px;
+	background-color: Transparent;
+	background-image: url("../arrowRight.gif");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.SimpleMenu li.AspNet-Menu-Leaf a, /* leaves */
+.SimpleMenu li.AspNet-Menu-Leaf span
+{
+    background-image: none !important;
+}
+
+.SimpleMenu li:hover a, /* hovered text */
+.SimpleMenu li:hover span,
+.SimpleMenu li.AspNet-Menu-Hover a,
+.SimpleMenu li.AspNet-Menu-Hover span,
+.SimpleMenu li:hover li:hover a,
+.SimpleMenu li:hover li:hover span,
+.SimpleMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover a,
+.SimpleMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover span,
+.SimpleMenu li:hover li:hover li:hover a,
+.SimpleMenu li:hover li:hover li:hover span,
+.SimpleMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li.AspNet-Menu-Hover a,
+.SimpleMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li.AspNet-Menu-Hover span
+{
+    color: #FFFFFF;
+    /*background: transparent url(activeArrowRight.gif) right center no-repeat;*/
+	background-color: Transparent;
+	background-image: url("../activeArrowRight.gif");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.SimpleMenu li:hover li a, /* the tier above this one is hovered */
+.SimpleMenu li:hover li span,
+.SimpleMenu li.AspNet-Menu-Hover li a,
+.SimpleMenu li.AspNet-Menu-Hover li span,
+.SimpleMenu li:hover li:hover li a,
+.SimpleMenu li:hover li:hover li span,
+.SimpleMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li a,
+.SimpleMenu li.AspNet-Menu-Hover li.AspNet-Menu-Hover li span
+{
+    color: #FFFFFF;
+    /*background: transparent url(arrowRight.gif) right center no-repeat;*/
+	background-color: Transparent;
+	background-image: url("../arrowRight.gif");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+/* this tier is selected */
+.SimpleMenu .AspNet-Menu-Selected
+{
+	border: 1px solid #4780B4 !important;
+	background: #7795BD;
+}
+/* a tier below this one is selected */
+.SimpleMenu .AspNet-Menu-ChildSelected
+{
+	border: 1px solid #1F6FB9 !important;
+}
+.SimpleMenu li.AspNet-Menu-ChildSelected
+{
+	background: #336699;
+}
+/* a tier above this one is selected */
+.SimpleMenu .AspNet-Menu-ParentSelected
+{
+	border: 1px solid #043F75 !important;
+}
+.SimpleMenu li.AspNet-Menu-ParentSelected
+{
+	background: #336699;
+}

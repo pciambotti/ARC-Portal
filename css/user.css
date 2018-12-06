@@ -1,0 +1,131 @@
+﻿.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.user_box:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.user_standard600
+{
+	float: left;
+	width: 600px;
+}
+#user_container
+{
+	margin-left: 0px;
+}
+#user_add
+{
+	width: 1101px;
+}
+#user_create
+{
+	float: left;
+	width: 600px;
+}
+#user_create_info
+{
+	float: left;
+	width: 485px;
+	margin-left: 10px;
+}
+.user_section
+{
+	border: 2px solid #3A4875;
+	min-height: 25px;
+	overflow: hidden;
+}
+
+.user_section h2
+{
+	color: #FFFFFF;
+	background-color: #3a4875;
+	font-size: 12px;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 15px;
+}
+.user_line
+{
+	width: 500px;
+	margin: 5px 0px 0px 5px;
+}
+.user_label
+{
+	float: left;
+	width: 150px;
+	min-height: 5px;
+	text-align: right;
+	margin-right: 15px;
+}
+.user_field
+{
+	float: left;
+	width: 325px;
+}
+.user_field input, .user_field select
+{
+	width: 150px;
+}
+.user_radio input
+{
+    width: 16px;
+}
+.user_phone input
+{
+	width: 35px;
+}
+.user_last
+{
+	padding-bottom: 10px;
+}
+.user_submit
+{
+	padding: 5px 10px 5px 10px;
+	min-height: 18px;
+	/*margin: 0px auto;*/
+	width: 437px;
+}
+.user_error
+{
+	padding: 5px 10px 5px 0px;
+	min-height: 18px;
+}
+.user_error ul
+{
+	margin-left: 15px;
+}
+.user_error_standard
+{
+	padding: 5px 10px 5px 0px;
+}
+.user_error_standard ul
+{
+	margin-left: 15px;
+}
+
+.user_info
+{
+}
+.user_info div
+{
+	margin: 0px 0px 0px 0px;
+}
+.user_info span
+{
+	display: block;
+	margin: 0px 0px 0px 15px;
+}
+.user_info .strong
+{
+	margin: 0px;
+	font-weight: bold;
+}
