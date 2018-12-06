@@ -1,0 +1,149 @@
+﻿<div>
+    <button id='btn<%# Eval("recordingid") %>' onclick="audioPlayToggle('<%# Eval("recordingid") %>');return false;">Play</button>
+    <button onclick="audioStop(this, '<%# Eval("recordingid") %>');return false;">Stop</button>
+    <button onclick="document.getElementById('<%# Eval("recordingid") %>').volume+=0.1; return false;">Volume Up</button>
+    <button onclick="document.getElementById('<%# Eval("recordingid") %>').volume-=0.1; return false;">Volume Down</button>
+    <div id="volumeMeter" onclick="setNewVolume(this,event,'<%# Eval("recordingid") %>')"></div>
+    <div id="volumeUp" onclick="changeVolume(10, 'up')"></div>
+    &nbsp;
+    <div id="volumeDown" onclick="changeVolume(10, 'down')"></div>
+</div>
+
+<div class="audio-player">
+    <h2>The Good Lawdz - Evidence Song</h2>
+    <audio id="audio-player" controls="controls">
+        <source src='<%# Eval("RecordingURL") %>' type="audio/mp3" />
+        Browser Compatibility Issue
+    </audio>
+</div><!-- @end .audio-player -->
+<script type="text/javascript">
+    $(function () {
+        $('#audio-player').mediaelementplayer({
+            alwaysShowControls: true,
+            features: ['playpause', 'progress', 'volume'],
+            audioVolume: 'horizontal',
+            audioWidth: 200,
+            audioHeight: 25,
+            iPadUseNativeControls: true,
+            iPhoneUseNativeControls: true,
+            AndroidUseNativeControls: true
+        });
+    });
+</script>
+
+<div>
+    <style type="text/css">
+        .audio-player, .audio-player div, .audio-player h2, .audio-player a, .audio-player span, .audio-player button {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+
+        div.audio-player {
+            position: relative;
+            width: 450px;
+            height: 70px;
+            margin: 0 auto;
+            background: #4c4e5a;
+            background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            background: -ms-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        .audio-player h2 {
+            position: absolute;
+            top: 7px;
+            left: 10px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #ececec;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+    </style>
+    <style type="text/css">
+        /*Volume Up Button*/
+        #volumeUp {
+        }
+        /*Volume Down Button*/
+        #volumeDown {
+        }
+    </style>
+    <script type="text/javascript">
+    function audioPlayToggle(id) {
+
+        //Sets the active song since one of the functions could be play.
+        activeSong = document.getElementById(id);
+        btnCntrl = $("#btn" + id);
+        //Checks to see if the song is paused, if it is, play it from where it left off otherwise pause it.
+        if (activeSong.paused) {
+            activeSong.play();
+            //cntrl.value = "Pause";
+            btnCntrl.text("Pause");
+        } else {
+            activeSong.pause();
+            //cntrl.value = "Play";
+            btnCntrl.text("Play");
+        }
+
+    }
+    function audioStop(cntrl, id) {
+        //Sets the active song since one of the functions could be play.
+        activeSong = document.getElementById(id);
+
+        activeSong.currentTime = 0;
+        activeSong.pause();
+        btnCntrl = $("#btn" + id);
+        btnCntrl.text("Play");
+    }
+    //Changes the volume up or down a specific number
+    function changeVolume(number, direction, id){
+        //Sets the active song since one of the functions could be play.
+        activeSong = document.getElementById(id);
+
+        //Checks to see if the volume is at zero, if so it doesn't go any further.
+        if(activeSong.volume >= 0 && direction == "down"){
+            activeSong.volume = activeSong.volume - (number / 100);
+        }
+
+        //Checks to see if the volume is at one, if so it doesn't go any higher.
+        if(activeSong.volume == 1){
+            activeSong.volume = activeSong.volume + (number / 100);
+        }
+
+        //Finds the percentage of the volume and sets the volume meter accordingly.
+        var percentageOfVolume = activeSong.volume / 1;
+        var percentageOfVolumeSlider = document.getElementById('volumeMeter').offsetWidth * percentageOfVolume;
+
+        document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
+    }
+    //Set's volume as a percentage of total volume based off of user click.
+    function setVolume(percentage, id) {
+        //Sets the active song since one of the functions could be play.
+        activeSong = document.getElementById(id);
+        activeSong.volume = percentage;
+
+        var percentageOfVolume = activeSong.volume / 1;
+        var percentageOfVolumeSlider = document.getElementById('volumeMeter').offsetWidth * percentageOfVolume;
+
+        document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
+    }
+
+    //Set's new volume id based off of the click on the volume bar.
+    function setNewVolume(obj, e, id) {
+        var volumeSliderWidth = obj.offsetWidth;
+        var evtobj = window.event ? event : e;
+        clickLocation = evtobj.layerX - obj.offsetLeft;
+
+        var percentage = (clickLocation / volumeSliderWidth);
+        setVolume(percentage, id);
+    }
+    </script>
+
+</div>

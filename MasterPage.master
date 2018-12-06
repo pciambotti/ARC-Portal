@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"  %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Portal - Reporting / Donor Services</title>
+    <asp:ContentPlaceHolder id="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/portal2.css" rel="stylesheet" type="text/css" />
+    <link href="css/portal_menu.css" rel="stylesheet" type="text/css" />
+    <link href="css/portal_menu_h.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager runat="Server" ID="ScriptManager1" EnablePartialRendering="true" EnablePageMethods="true" AsyncPostBackTimeout="600" />
+        <div id="portal_container">
+            <div id="master_header_new">
+                <div id="master_header_new_top">
+                    <div id="master_header_new_top_left" style="background-color: <%=masterColor %>;">
+                        <div style="height: 75px;margin-left: 25px;vertical-align: middle;">
+                            <div style="float: left;vertical-align: middle;height: 100%;">
+                                <span style="display: inline-block;margin-top: 5px;">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/GnH-Logo-CMYK.png" Width="300px" Height="63px" style="vertical-align: middle;" AlternateText="Greenwood & Hall" />
+                                </span>
+                            </div>
+                            <div style="float: left;margin: 20px 0px 0px 25px;">
+                                <h1><asp:Label ID="lblMasterHeader" runat="server" Text="ARC" /><asp:Label ID="lblTitleHeader" runat="server" Text="" /></h1>
+                            </div>
+                        </div>
+                        <div style="margin-left: 25px;">
+                            <asp:Menu ID="Menu1" runat="server"
+                                Orientation="Horizontal"
+                                CssSelectorClass="PrettyMenu"
+                                Visible="true"
+                                >
+                                <DataBindings>
+                                    <asp:MenuItemBinding
+                                        TextField="Text" NavigateUrlField="NavigateURL"
+                                        ToolTipField="ToolTip" TargetField="Target"
+                                        />
+                                </DataBindings>
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                    </div>
+                    <div id="master_header_new_top_right" style="text-align: left;">
+                        <div style="margin-top: 15px;">
+                            <asp:Label ID="UserFullName" runat="server" />
+                            <span style="margin-left: 5px;">
+                                <asp:HyperLink ID="hlUserProfile" runat="server" NavigateUrl="~/User_Profile.aspx">User Profile</asp:HyperLink>
+                                <asp:LoginName ID="LoginName1" runat="server" Visible="false" />
+                            </span>
+                        </div>
+                        <div style="margin-top: 1px;">
+                            <asp:Literal ID="Literal3" runat="server" Text="Test" />
+                        </div>
+                        <div style="margin-top: 1px;">
+                            <asp:LoginStatus ID="LoginStatus1" runat="server"
+                                LogoutPageUrl="~/Logout.aspx"
+                                LogoutAction="Redirect"
+                                />
+                        </div>
+                        <div style="margin-top: 1px;">
+                            <asp:Label ID="DBMode" runat="server" />
+                        </div>
+                    </div>
+                </div>
+                <div id="master_header_bottom">
+                    <div id="master_header_bottom_left">
+                        <div id="master_header_bottom_left_inner">
+                            <asp:Label ID="MessageLabel" runat="server" Text="Message Label" />
+                        </div>
+                    </div>
+                    <div id="master_header_bottom_right">
+                        <asp:Label ID="Label2" runat="server" Text="Portal" />
+                    </div>
+                </div>
+                <div class="clear_both">
+                </div>
+            </div>
+            <%--Content Section--%>
+            <div id="master_content" title="">
+                <div id="master_content_inner" title="">
+                    <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>--%>
+                            <asp:ContentPlaceHolder id="Master_Content" runat="server">
+                            </asp:ContentPlaceHolder>
+                        <%--</ContentTemplate>
+                    </asp:UpdatePanel>--%>
+                </div>
+            </div>
+            <%--Footer Section--%>
+            <div id="master_footer" title="">
+                <div id="master_footer_static" title="">
+                    Powered by Greenwood & Hall
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="master_footer_debug" title="">
+                    <asp:Panel ID="Panel1" runat="server" Visible="false">
+                        <asp:Label id="DeBug_Footer" runat="server" />
+                    </asp:Panel>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
